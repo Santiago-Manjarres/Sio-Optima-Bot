@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIO OPTIMA — Tu Gestor de Tareas Inteligente en Telegram</title>
+    <meta name="description" content="SIO OPTIMA es un bot de Telegram potenciado por IA que organiza tus tareas, bloques de estudio y más. Pruébalo gratis.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Floating Background Objects -->
+    <div class="floating-objects" aria-hidden="true">
+        <div class="float-orb orb-1"></div>
+        <div class="float-orb orb-2"></div>
+        <div class="float-orb orb-3"></div>
+        <div class="float-orb orb-4"></div>
+        <div class="float-orb orb-5"></div>
+        <div class="float-ring ring-1"></div>
+        <div class="float-ring ring-2"></div>
+        <div class="float-cube cube-1"></div>
+        <div class="float-cube cube-2"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">SIO <span class="accent">OPTIMA</span></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#features">Funciones</a></li>
+                <li><a href="#how-it-works">Cómo Funciona</a></li>
+                <li><a href="#study-blocks">Estudio</a></li>
+            </ul>
+            <a href="https://t.me/sio_optima_bot" target="_blank" rel="noopener" class="nav-cta" id="nav-cta">
+                Probar Gratis
+                <span class="cta-arrow">→</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-grid-bg" aria-hidden="true"></div>
+        <div class="hero-content">
+            <div class="hero-badge reveal">
+                <span class="badge-dot"></span>
+                Potenciado por IA Gemini
+            </div>
+            <h1 class="hero-title reveal">
+                Organiza tu vida<br>
+                <span class="gradient-text">sin esfuerzo.</span>
+            </h1>
+            <p class="hero-subtitle reveal">
+                SIO OPTIMA es tu asistente personal en Telegram. Gestiona tareas, 
+                planifica bloques de estudio y recibe recordatorios — todo con el poder 
+                de la inteligencia artificial.
+            </p>
+            <div class="hero-actions reveal">
+                <a href="https://t.me/sio_optima_bot" target="_blank" rel="noopener" class="btn btn-primary" id="hero-cta">
+                    <span class="btn-glow"></span>
+                    <span class="btn-content">
+                        <svg class="telegram-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                        </svg>
+                        Comenzar en Telegram
+                    </span>
+                </a>
+                <a href="#features" class="btn btn-secondary" id="hero-learn-more">
+                    Descubrir más
+                </a>
+            </div>
+            <div class="hero-stats reveal">
+                <div class="stat">
+                    <span class="stat-number" data-count="24">0</span><span class="stat-suffix">/7</span>
+                    <span class="stat-label">Disponible</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-count="100">0</span><span class="stat-suffix">%</span>
+                    <span class="stat-label">Gratuito</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number">IA</span>
+                    <span class="stat-label">Gemini AI</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual reveal">
+            <div class="phone-mockup">
+                <div class="phone-notch"></div>
+                <div class="phone-screen">
+                    <div class="chat-header">
+                        <div class="chat-avatar">🤖</div>
+                        <div>
+                            <div class="chat-name">SIO OPTIMA</div>
+                            <div class="chat-status">en línea</div>
+                        </div>
+                    </div>
+                    <div class="chat-messages">
+                        <div class="msg msg-user">
+                            <div class="msg-bubble">/bloque Matemáticas mie 14:00 16:00</div>
+                        </div>
+                        <div class="msg msg-bot">
+                            <div class="msg-bubble">📚 <strong>Bloque creado</strong><br>• Matemáticas<br>• Miércoles 14:00 - 16:00<br><br>Te recordaré 10 min antes ⏰</div>
+                        </div>
+                        <div class="msg msg-user">
+                            <div class="msg-bubble">Tengo que entregar el proyecto el viernes</div>
+                        </div>
+                        <div class="msg msg-bot">
+                            <div class="msg-bubble">✨ <strong>Tarea guardada:</strong> Entregar proyecto (ID: 5)<br><br>¡No olvides planificar tu tiempo! 💪</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-tag">Funciones</span>
+                <h2 class="section-title">Todo lo que necesitas<br><span class="gradient-text">en un solo bot.</span></h2>
+                <p class="section-subtitle">Potenciado por inteligencia artificial para entender lo que necesitas, incluso antes de que lo digas.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card reveal" id="feature-tasks">
+                    <div class="feature-icon-wrap">
+                        <span class="feature-icon">✅</span>
+                        <div class="feature-icon-glow"></div>
+                    </div>
+                    <h3 class="feature-title">Gestión de Tareas</h3>
+                    <p class="feature-desc">Crea, lista, completa y elimina tareas con comandos simples. Tu lista de pendientes siempre organizada.</p>
+                    <div class="feature-cmd">/add Entregar informe</div>
+                </div>
+                <div class="feature-card reveal" id="feature-ai">
+                    <div class="feature-icon-wrap">
+                        <span class="feature-icon">🧠</span>
+                        <div class="feature-icon-glow"></div>
+                    </div>
+                    <h3 class="feature-title">Detección con IA</h3>
+                    <p class="feature-desc">Envía un mensaje natural y la IA detecta automáticamente si hay una tarea oculta. Sin comandos necesarios.</p>
+                    <div class="feature-cmd">"Debo llamar al doctor mañana"</div>
+                </div>
+                <div class="feature-card reveal" id="feature-study">
+                    <div class="feature-icon-wrap">
+                        <span class="feature-icon">📚</span>
+                        <div class="feature-icon-glow"></div>
+                    </div>
+                    <h3 class="feature-title">Bloques de Estudio</h3>
+                    <p class="feature-desc">Planifica tu horario de estudio semanal y recibe recordatorios automáticos 10 minutos antes de cada sesión.</p>
+                    <div class="feature-cmd">/bloque Física lun 10:00 12:00</div>
+                </div>
+                <div class="feature-card reveal" id="feature-multimodal">
+                    <div class="feature-icon-wrap">
+                        <span class="feature-icon">📷</span>
+                        <div class="feature-icon-glow"></div>
+                    </div>
+                    <h3 class="feature-title">Análisis Multimodal</h3>
+                    <p class="feature-desc">Envía fotos de notas, capturas de pantalla o notas de voz y el bot extrae las tareas automáticamente.</p>
+                    <div class="feature-cmd">📎 Envía una foto o audio</div>
+                </div>
+                <div class="feature-card reveal" id="feature-reminders">
+                    <div class="feature-icon-wrap">
+                        <span class="feature-icon">⏰</span>
+                        <div class="feature-icon-glow"></div>
+                    </div>
+                    <h3 class="feature-title">Recordatorios</h3>
+                    <p class="feature-desc">Nunca olvides un bloque de estudio. Recibe notificaciones automáticas directamente en tu chat de Telegram.</p>
+                    <div class="feature-cmd">⏰ ¡Matemáticas en 10 min!</div>
+                </div>
+                <div class="feature-card reveal" id="feature-natural">
+                    <div class="feature-icon-wrap">
+                        <span class="feature-icon">💬</span>
+                        <div class="feature-icon-glow"></div>
+                    </div>
+                    <h3 class="feature-title">Lenguaje Natural</h3>
+                    <p class="feature-desc">Escribe los días como quieras: "mie", "miercoles", "miércoles" — el bot siempre te entiende.</p>
+                    <div class="feature-cmd">mie = miércoles ✓</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-tag">Cómo Funciona</span>
+                <h2 class="section-title">Tres pasos para<br><span class="gradient-text">máxima productividad.</span></h2>
+            </div>
+            <div class="steps">
+                <div class="step reveal" id="step-1">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Abre Telegram</h3>
+                        <p>Busca <strong>@sio_optima_bot</strong> o haz clic en el botón para iniciar una conversación directa con el bot.</p>
+                    </div>
+                    <div class="step-visual">
+                        <div class="step-icon">🔍</div>
+                    </div>
+                </div>
+                <div class="step-connector reveal"></div>
+                <div class="step reveal" id="step-2">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Escribe /start</h3>
+                        <p>Activa el bot y accede a todos los comandos. Envía <strong>/help</strong> para ver la guía completa de funciones.</p>
+                    </div>
+                    <div class="step-visual">
+                        <div class="step-icon">🚀</div>
+                    </div>
+                </div>
+                <div class="step-connector reveal"></div>
+                <div class="step reveal" id="step-3">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Organiza Todo</h3>
+                        <p>Crea tareas, programa bloques de estudio y deja que la IA te ayude a extraer pendientes de tus mensajes, fotos y audios.</p>
+                    </div>
+                    <div class="step-visual">
+                        <div class="step-icon">✨</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Study Blocks Showcase -->
+    <section class="study-showcase" id="study-blocks">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-tag">Bloques de Estudio</span>
+                <h2 class="section-title">Tu semana de estudio,<br><span class="gradient-text">perfectamente organizada.</span></h2>
+                <p class="section-subtitle">Define tus bloques de estudio con horarios y días. Escribe el día como te salga — el bot siempre te entiende.</p>
+            </div>
+            <div class="schedule-demo reveal">
+                <div class="schedule-card">
+                    <div class="schedule-day">📅 Lunes</div>
+                    <div class="schedule-block">
+                        <div class="block-time">08:00 - 10:00</div>
+                        <div class="block-subject">Cálculo Integral</div>
+                    </div>
+                    <div class="schedule-block">
+                        <div class="block-time">14:00 - 16:00</div>
+                        <div class="block-subject">Programación</div>
+                    </div>
+                </div>
+                <div class="schedule-card">
+                    <div class="schedule-day">📅 Miércoles</div>
+                    <div class="schedule-block">
+                        <div class="block-time">10:00 - 12:00</div>
+                        <div class="block-subject">Física</div>
+                    </div>
+                    <div class="schedule-block accent-block">
+                        <div class="block-time">15:00 - 17:00</div>
+                        <div class="block-subject">Álgebra Lineal</div>
+                        <div class="block-reminder">⏰ Recordatorio en 10 min</div>
+                    </div>
+                </div>
+                <div class="schedule-card">
+                    <div class="schedule-day">📅 Viernes</div>
+                    <div class="schedule-block">
+                        <div class="block-time">09:00 - 11:00</div>
+                        <div class="block-subject">Inglés</div>
+                    </div>
+                    <div class="schedule-block">
+                        <div class="block-time">16:00 - 18:00</div>
+                        <div class="block-subject">Proyecto Final</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="cta">
+        <div class="cta-glow" aria-hidden="true"></div>
+        <div class="section-container">
+            <div class="cta-content reveal">
+                <h2 class="cta-title">¿Listo para <span class="gradient-text">optimizar</span> tu productividad?</h2>
+                <p class="cta-subtitle">Únete ahora y empieza a organizar tu vida con inteligencia artificial. Es gratis, rápido y sin registro.</p>
+                <a href="https://t.me/sio_optima_bot" target="_blank" rel="noopener" class="btn btn-primary btn-large" id="cta-main">
+                    <span class="btn-glow"></span>
+                    <span class="btn-content">
+                        <svg class="telegram-icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                            <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                        </svg>
+                        Abrir SIO OPTIMA en Telegram
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="section-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">⚡</span>
+                    <span class="logo-text">SIO <span class="accent">OPTIMA</span></span>
+                </div>
+                <p class="footer-tagline">Tu gestor de tareas inteligente en Telegram.</p>
+                <div class="footer-links">
+                    <a href="https://t.me/sio_optima_bot" target="_blank" rel="noopener">Telegram Bot</a>
+                    <a href="#features">Funciones</a>
+                    <a href="#how-it-works">Cómo Funciona</a>
+                </div>
+                <p class="footer-copy">© 2026 SIO OPTIMA. Hecho con ⚡ e inteligencia artificial.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
